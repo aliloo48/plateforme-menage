@@ -1,6 +1,6 @@
 {
-  "name": "Shadow Ménage",
-  "short_name": "Shadow Ménage",
+  "name": "plateforme-menage",
+  "short_name": "plateforme-menage",
   "description": "Transforme les tâches ménagères en missions avec XP et niveaux.",
   "start_url": "./index.html",
   "display": "standalone",

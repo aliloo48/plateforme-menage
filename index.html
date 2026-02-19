@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Ménage</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <meta name="theme-color" content="#7cc6c8" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Shadow Ménage</h1>
+    <p class="subtitle">Transforme les tâches ménagères en jeu de rôle</p>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-btn active" data-tab="tasks">🧹 TÂCHES</button>
+    <button class="nav-btn" data-tab="status">📊 STATUT</button>
+    <button class="nav-btn" data-tab="rewards">🏅 RÉCOMPENSES</button>
+    <button class="nav-btn" data-tab="guide">📖 GUIDE</button>
+  </nav>
+
+  <main>
+    <!-- Onglet TÂCHES -->
+    <section id="tab-tasks" class="tab active">
+      <h2>Portails du ménage</h2>
+      <p class="tab-desc">Organise ton ménage en missions quotidiennes, hebdomadaires, mensuelles et spéciales.</p>
+
+      <div class="portals">
+        <button class="portal-btn active" data-portal="daily">📅 Quotidiennes</button>
+        <button class="portal-btn" data-portal="weekly">🔥 Hebdomadaires</button>
+        <button class="portal-btn" data-portal="monthly">🏆 Mensuelles</button>
+        <button class="portal-btn" data-portal="custom">⭐ Personnalisées</button>
+      </div>
+
+      <div id="tasks-container" class="tasks-list">
+        <!-- Les tâches seront injectées par app.js -->
+      </div>
+
+      <div class="add-task">
+        <h3>Ajouter une mission ménage</h3>
+        <div class="add-task-row">
+          <input id="new-task-label" type="text" placeholder="Ex : Aspirateur salon" />
+          <input id="new-task-xp" type="number" min="10" max="1000" step="10" value="100" />
+          <select id="new-task-portal">
+            <option value="daily">Quotidienne</option>
+            <option value="weekly">Hebdomadaire</option>
+            <option value="monthly">Mensuelle</option>
+            <option value="custom">Personnalisée</option>
+          </select>
+          <button id="add-task-btn">Ajouter</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Onglet STATUT -->
+    <section id="tab-status" class="tab">
+      <h2>Statut du foyer</h2>
+      <div class="status-cards">
+        <div class="status-card">
+          <h3>XP total</h3>
+          <p id="total-xp">0 XP</p>
+        </div>
+        <div class="status-card">
+          <h3>Niveau de propreté</h3>
+          <p id="level-label">Novice du ménage</p>
+        </div>
+        <div class="status-card">
+          <h3>Tâches complétées</h3>
+          <p id="tasks-done-count">0 missions</p>
+        </div>
+      </div>
+
+      <div class="history">
+        <h3>Historique récent</h3>
+        <ul id="history-list">
+          <!-- Historique injecté par app.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Onglet RÉCOMPENSES -->
+    <section id="tab-rewards" class="tab">
+      <h2>Récompenses</h2>
+      <p class="tab-desc">Utilise tes points de ménage pour te récompenser (temps libre, série, jeu vidéo, etc.).</p>
+
+      <ul class="rewards-list">
+        <li>
+          <h3>Pause café</h3>
+          <p>Coût : 200 XP</p>
+        </li>
+        <li>
+          <h3>1 épisode de série</h3>
+          <p>Coût : 500 XP</p>
+        </li>
+        <li>
+          <h3>Session jeu vidéo</h3>
+          <p>Coût : 800 XP</p>
+        </li>
+      </ul>
+
+      <p class="info">Les récompenses sont symboliques : à toi de décider quand tu “dépenses” tes points.</p>
+    </section>
+
+    <!-- Onglet GUIDE -->
+    <section id="tab-guide" class="tab">
+      <h2>Guide du ménage gamifié</h2>
+      <ol class="guide-list">
+        <li>Chaque tâche ménagère devient une <strong>mission</strong> avec des points d’XP.</li>
+        <li>Complète des missions chaque jour pour faire monter ton niveau de propreté.</li>
+        <li>Utilise les catégories Quotidiennes, Hebdomadaires et Mensuelles pour structurer ton ménage.</li>
+        <li>Crée des missions personnalisées pour les gros rangements ou les événements spéciaux.</li>
+        <li>Récompense-toi avec des pauses, séries, jeux, quand tu atteins un certain total d’XP.</li>
+      </ol>
+
+      <p class="info">
+        Plus tard, tu pourras ajouter plusieurs profils (famille, colocs) et un classement entre joueurs.
+      </p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Shadow Ménage • Plateforme de gamification du ménage</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

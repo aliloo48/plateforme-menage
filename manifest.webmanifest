@@ -1,0 +1,21 @@
+{
+  "name": "Shadow Ménage",
+  "short_name": "Shadow Ménage",
+  "description": "Transforme les tâches ménagères en missions avec XP et niveaux.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#7cc6c8",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

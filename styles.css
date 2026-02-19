@@ -54,7 +54,7 @@ header.app-header {
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
 }
 
-/* Maison + éclat très simplifiés en CSS */
+/* Logo H pour Hakmaoui */
 .brand-logo::before,
 .brand-logo::after {
   content: "";
@@ -62,24 +62,23 @@ header.app-header {
 }
 
 .brand-logo::before {
-  /* corps de la maison */
-  left: 9px;
-  top: 15px;
-  width: 22px;
-  height: 14px;
+  left: 12px;
+  top: 11px;
+  width: 16px;
+  height: 18px;
   border-radius: 4px;
   border: 2px solid #ffffff;
   border-top: none;
 }
 
+/* barre centrale du H */
 .brand-logo::after {
-  /* petit éclat de propreté */
-  right: 7px;
-  top: 8px;
+  left: 16px;
+  top: 18px;
   width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 999px;
 }
 
 .app-header h1 {
@@ -418,4 +417,5 @@ main {
     align-items: center;
   }
 }
+
 

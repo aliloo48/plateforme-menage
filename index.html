@@ -29,7 +29,6 @@
   </nav>
 
   <main>
-    <!-- Onglet TÂCHES -->
     <section id="tab-tasks" class="tab active">
       <h2>Portails du ménage</h2>
       <p class="tab-desc">Organise ton ménage en missions quotidiennes, hebdomadaires, mensuelles et spéciales.</p>
@@ -41,9 +40,7 @@
         <button class="portal-btn" data-portal="custom">⭐ Personnalisées</button>
       </div>
 
-      <div id="tasks-container" class="tasks-list">
-        <!-- Les tâches seront injectées par app.js -->
-      </div>
+      <div id="tasks-container" class="tasks-list"></div>
 
       <div class="add-task">
         <h3>Ajouter une mission ménage</h3>
@@ -61,7 +58,6 @@
       </div>
     </section>
 
-    <!-- Onglet STATUT -->
     <section id="tab-status" class="tab">
       <h2>Statut du foyer</h2>
       <div class="status-cards">
@@ -81,13 +77,10 @@
 
       <div class="history">
         <h3>Historique récent</h3>
-        <ul id="history-list">
-          <!-- Historique injecté par app.js -->
-        </ul>
+        <ul id="history-list"></ul>
       </div>
     </section>
 
-    <!-- Onglet RÉCOMPENSES -->
     <section id="tab-rewards" class="tab">
       <h2>Récompenses</h2>
       <p class="tab-desc">Utilise tes points de ménage pour te récompenser (temps libre, série, jeu vidéo, etc.).</p>
@@ -110,7 +103,6 @@
       <p class="info">Les récompenses sont symboliques : à toi de décider quand tu “dépenses” tes points.</p>
     </section>
 
-    <!-- Onglet GUIDE -->
     <section id="tab-guide" class="tab">
       <h2>Guide du ménage gamifié</h2>
       <ol class="guide-list">
@@ -134,3 +126,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
